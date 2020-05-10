@@ -49,6 +49,7 @@ use pocketmine\network\mcpe\protocol\InteractPacket;
 use pocketmine\network\mcpe\protocol\InventoryContentPacket;
 use pocketmine\network\mcpe\protocol\InventorySlotPacket;
 use pocketmine\network\mcpe\protocol\ItemFrameDropItemPacket;
+use pocketmine\network\mcpe\protocol\LevelChunkPacket;
 use pocketmine\network\mcpe\protocol\LevelEventPacket;
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
 use pocketmine\network\mcpe\protocol\LoginPacket;
@@ -167,6 +168,8 @@ interface NetworkSession{
 	public function handleHurtArmor(HurtArmorPacket $packet) : bool;
 
 	public function handleSetHealth(SetHealthPacket $packet) : bool;
+	
+	public function handleLevelChunk(LevelChunkPacket $packet) : bool;
 
 	public function handleSetSpawnPosition(SetSpawnPositionPacket $packet) : bool;
 
