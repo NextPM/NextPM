@@ -135,6 +135,6 @@ abstract class BaseLevelProvider implements LevelProvider{
 			throw new ChunkException("Invalid Chunk sent");
 		}
 
-		return new ChunkRequestTask($this->level, $chunk);
+		return new ChunkRequestTask($this->level, $x, $z, $chunk);
 	}
 }
