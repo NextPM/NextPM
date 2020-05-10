@@ -32,17 +32,17 @@ class LevelChunkPacket extends DataPacket/* implements ClientboundPacket*/{
 	const NETWORK_ID = ProtocolInfo::LEVEL_CHUNK_PACKET;
 
 	/** @var int */
-	private $chunkX;
+	public $chunkX;
 	/** @var int */
-	private $chunkZ;
+	public $chunkZ;
 	/** @var int */
-	private $subChunkCount;
+	public $subChunkCount;
 	/** @var bool */
-	private $cacheEnabled;
+	public $cacheEnabled;
 	/** @var int[] */
-	private $usedBlobHashes = [];
+	public $usedBlobHashes = [];
 	/** @var string */
-	private $extraPayload;
+	public $extraPayload;
 
 	public static function withoutCache(int $chunkX, int $chunkZ, int $subChunkCount, string $payload) : self{
 		$result = new self;
