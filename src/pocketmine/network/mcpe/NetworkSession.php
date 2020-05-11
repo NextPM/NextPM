@@ -87,6 +87,7 @@ use pocketmine\network\mcpe\protocol\ShowCreditsPacket;
 use pocketmine\network\mcpe\protocol\SpawnExperienceOrbPacket;
 use pocketmine\network\mcpe\protocol\StartGamePacket;
 use pocketmine\network\mcpe\protocol\StopSoundPacket;
+use pocketmine\network\mcpe\protocol\TickSyncPacket;
 use pocketmine\network\mcpe\protocol\TextPacket;
 use pocketmine\network\mcpe\protocol\TransferPacket;
 use pocketmine\network\mcpe\protocol\UpdateAttributesPacket;
@@ -136,6 +137,8 @@ interface NetworkSession{
 	public function handleAddEntity(AddEntityPacket $packet) : bool;
 
 	public function handleRemoveEntity(RemoveEntityPacket $packet) : bool;
+	
+	public function handleTickSync(TickSyncPacket $packet) : bool;
 
 	public function handleMovePlayer(MovePlayerPacket $packet) : bool;
 
