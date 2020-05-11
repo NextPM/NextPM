@@ -90,6 +90,7 @@ use pocketmine\network\mcpe\protocol\SpawnExperienceOrbPacket;
 use pocketmine\network\mcpe\protocol\StartGamePacket;
 use pocketmine\network\mcpe\protocol\StopSoundPacket;
 use pocketmine\network\mcpe\protocol\TextPacket;
+use pocketmine\network\mcpe\protocol\TickSyncPacket;
 use pocketmine\network\mcpe\protocol\TransferPacket;
 use pocketmine\network\mcpe\protocol\UnknownPacket;
 use pocketmine\network\mcpe\protocol\UpdateBlockPacket;
@@ -324,6 +325,7 @@ class Network{
 		$this->registerPacket(ProtocolInfo::SPAWN_EXPERIENCE_ORB_PACKET, SpawnExperienceOrbPacket::class);
 		$this->registerPacket(ProtocolInfo::START_GAME_PACKET, StartGamePacket::class);
 		$this->registerPacket(ProtocolInfo::STOP_SOUND_PACKET, StopSoundPacket::class);
+		$this->registerPacket(ProtocolInfo::TICK_SYNC_PACKET, TickSyncPacket::class);
 		$this->registerPacket(ProtocolInfo::TEXT_PACKET, TextPacket::class);
 		$this->registerPacket(ProtocolInfo::TRANSFER_PACKET, TransferPacket::class);
 		$this->registerPacket(ProtocolInfo::UPDATE_BLOCK_PACKET, UpdateBlockPacket::class);
