@@ -46,7 +46,6 @@ class ResourcePackClientResponsePacket extends DataPacket{
 	}
 
 	public function encode(){
-		$this->reset();
 		$this->putByte($this->status);
 		$this->putLShort(count($this->packIds));
 		foreach($this->packIds as $id){
