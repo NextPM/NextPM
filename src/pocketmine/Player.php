@@ -170,6 +170,7 @@ use pocketmine\network\mcpe\protocol\ShowCreditsPacket;
 use pocketmine\network\mcpe\protocol\SpawnExperienceOrbPacket;
 use pocketmine\network\mcpe\protocol\StartGamePacket;
 use pocketmine\network\mcpe\protocol\StopSoundPacket;
+use pocketmine\network\mcpe\protocol\TickSyncPacket;
 use pocketmine\network\mcpe\protocol\TextPacket;
 use pocketmine\network\mcpe\protocol\TransferPacket;
 use pocketmine\network\mcpe\protocol\UpdateAttributesPacket;
@@ -2220,6 +2221,10 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 	}
 
 	public function handleAddPainting(AddPaintingPacket $packet) : bool{
+		return false;
+	}
+		
+	public function handleTickSync(TickSyncPacket $packet) : bool{
 		return false;
 	}
 
